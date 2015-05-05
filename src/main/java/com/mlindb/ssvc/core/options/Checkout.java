@@ -10,5 +10,9 @@ public class Checkout implements OptionParser {
     public void parse(String[] args) throws OptionParserException {
         File f = new File(args[1]);
         ParseHelper.checkFileOrDirectory(f);
+
+        if (args.length > 2) {
+            throw new OptionParserException("Error: Correct syntax is \"ssvc checkout [repository path]\"");
+        }
     }
 }
