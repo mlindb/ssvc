@@ -1,5 +1,6 @@
 package com.mlindb.ssvc.core.options;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 /**
@@ -8,8 +9,13 @@ import org.junit.Test;
 public class UpdateTest {
 
     @Test
-    public void testParse() throws Exception {
-        Update u = new Update();
-        u.parse("", "throwexception");
+    public void testParseTooManyArgs() throws Exception {
+        String expectedErrorMsg = "Error: Correct syntax is \"ssvc update [path]\"";
+        try {
+            new Update().parse("", ".", "");
+            Assert.fail("Should have thrown an OptionParserException because of too many args!");
+        } catch (OptionParserException e) {
+            Assert.assertEquals(expectedErrorMsg, e.getMessage());
+        }
     }
 }

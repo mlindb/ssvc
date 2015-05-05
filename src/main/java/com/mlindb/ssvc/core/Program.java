@@ -14,7 +14,7 @@ public class Program {
 
     private static void run(String[] args) {
         try {
-            OptionParser p = Option.valueOf(args[0]).getInstance();
+            OptionParser p = Option.valueOf(args[0].toUpperCase()).getInstance();
             p.parse(args);
         } catch (IllegalArgumentException e) {
             die("Error");
