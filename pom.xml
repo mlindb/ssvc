@@ -8,5 +8,27 @@
     <artifactId>ssvc-core</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <name>Super-simple VersionControl</name>
+    <url>https://github.com/mlindb/ssvc</url>
 
+    <developers>
+        <developer>
+            <name>Magnus Lindberg</name>
+            <organization>mlindb.com</organization>
+        </developer>
+    </developers>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+        </dependency>
+    </dependencies>
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 </project>
