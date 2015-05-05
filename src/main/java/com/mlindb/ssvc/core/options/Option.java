@@ -1,4 +1,4 @@
-package options;
+package com.mlindb.ssvc.core.options;
 
 /**
  * Created by magnus.lindberg on 2015-05-05.
